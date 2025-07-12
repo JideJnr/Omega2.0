@@ -1,5 +1,5 @@
 // src/god-complex/judge.ts
-import { EngineVerdict, PredictionResult } from '../../types/types';
+import { EngineVerdict, PredictionResult } from '../../../types/types';
 
 export class JudgeEngine {
   constructor() {}

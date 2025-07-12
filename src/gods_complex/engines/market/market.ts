@@ -1,5 +1,5 @@
 // engines/market.ts
-import { MatchData, EngineVerdict } from '../../types/types';
+import { MatchData, EngineVerdict } from '../../../types/types';
 
 export class MarketEngine {
   public async analyze(match: MatchData, dataType: 'today' | 'live'): Promise<EngineVerdict> {

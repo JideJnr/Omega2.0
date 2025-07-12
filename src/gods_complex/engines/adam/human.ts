@@ -1,7 +1,7 @@
 // src/analyst-bots/engines/human.ts
 
-import { MatchData, EngineVerdict } from '../../types/types';
-import { HumanLawyerService } from '../../services/humanLawyer.service';
+import { MatchData, EngineVerdict } from '../../../types/types';
+import { HumanLawyerService } from '../../../services/humanLawyer.service';
 
 export class HumanEngine {
   private humanLawyerService: HumanLawyerService;

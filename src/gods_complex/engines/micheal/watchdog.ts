@@ -1,5 +1,5 @@
 // engines/watchdog.ts
-import { MatchData, EngineVerdict } from '../../types/types';
+import { MatchData, EngineVerdict } from '../../../types/types';
 
 export class WatchdogEngine {
   public async analyze(match: MatchData, dataType: 'today' | 'live'): Promise<EngineVerdict> {

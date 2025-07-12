@@ -1,6 +1,6 @@
 // src/analyst-bots/engines/statistical.ts
 
-import { MatchData, EngineVerdict } from '../../types/types';
+import { MatchData, EngineVerdict } from '../../../types/types';
 
 export class StatisticalEngine {
   constructor() {
