@@ -25,10 +25,10 @@ export class HumanEngine {
       engine: 'OfflineBot', // or 'HumanEngine' if you prefer
       matchId: match.id,
       dataType,
-      predictedOutcome: verdict.predictedOutcome,
+      predictedOutcome: 'verdict.predictedOutcome',
       confidence: verdict.confidence || 100,
-      reasoning: verdict.reasoning || 'Manually submitted verdict',
-      timestamp: verdict.timestamp,
+      reasoning: 'verdict.reasoning' ,
+      timestamp: new Date(),
     };
   }
 }

@@ -1,21 +1,16 @@
-// offline-bot/humanLawyer.service.ts
-
-import { EngineVerdict } from '../types/types';
-import { getMongoCollection } from '../db'; 
+import { EngineVerdict, VerdictModel } from '../models/Verdict';
 
 export class HumanLawyerService {
-  private collection = getMongoCollection('offline_verdicts');
-
   public async saveVerdict(verdict: EngineVerdict) {
-    await this.collection.insertOne(verdict);
+    const newVerdict = new VerdictModel(verdict);
+    await newVerdict.save();
   }
 
   public async getVerdictForMatch(matchId: string): Promise<EngineVerdict | null> {
-    return await this.collection.findOne({ matchId });
+    return await VerdictModel.findOne({ matchId }).exec();
   }
 
   public async getAllVerdicts(): Promise<EngineVerdict[]> {
-    return await this.collection.find({}).toArray();
+    return await VerdictModel.find({}).exec();
   }
 }
-

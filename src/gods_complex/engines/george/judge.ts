@@ -22,12 +22,12 @@ export class JudgeEngine {
       Draw: 0,
       AwayWin: 0
     };
-
+{/*
     for (const v of engineVerdicts) {
       counts[v.predictedOutcome]++;
       totalConfidence[v.predictedOutcome] += v.confidence;
     }
-
+*/}
     // 2. Decide the final outcome (most votes)
     const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
     const predictedOutcome = sorted[0][0] as 'HomeWin' | 'Draw' | 'AwayWin';
