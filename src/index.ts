@@ -1,3 +1,5 @@
+
+
 // index.js
 import { HelperBot } from './helper-bots/bot';
 import { createClient } from 'redis';
@@ -11,8 +13,6 @@ await redisSubscriber.connect();
 
 let helperBot: HelperBot | null = null;
 let isRunning = false;
-helperBot = new HelperBot();
-helperBot.initialize();
 
 redisSubscriber.subscribe('bot-control', async (message) => {
   const { command } = JSON.parse(message);
@@ -20,6 +20,8 @@ redisSubscriber.subscribe('bot-control', async (message) => {
   if (command === 'START_BOT' && !isRunning) {
     isRunning = true;
     console.log('🟢 Command received...  ');
+    //crawler bot 
+    // cleaner bot
 
 
     helperBot = new HelperBot();

@@ -51,3 +51,38 @@ export interface MatchAnalysis {
   predictions: PredictionResult[];
   timestamp: Date;
 }
+
+// src/types/index.ts
+export interface Outcome {
+  id: string;
+  label: string;
+  odds: number;
+  probability: number;
+}
+
+export interface Market {
+  id: string;
+  type: string; // '1x2', 'over_under'
+  specifier: string; // 'total=1.5'
+  outcomes: Outcome[];
+  status: number;
+}
+
+export interface Event {
+  id: string;
+  homeTeam: string;
+  awayTeam: string;
+  status: number;
+  score: string;
+  markets: Market[];
+}
+
+export interface Tournament {
+  id: string;
+  name: string;
+  category: {
+    id: string;
+    name: string;
+  };
+  events: Event[];
+}

@@ -1,7 +1,7 @@
 import { TriggerManager } from './triggers/index';
 import { ActionHandler } from './actions/index';
 import { ResponseLogger } from './responses/index';
-import { fetchTodayMatches, fetchLiveMatches } from './../runners/sportybet';
+import { fetchTodayMatches, fetchLiveMatches } from '../runners/sportybet';
 //import  {AnalystBot}  from '../analyst-bots/bot';
 //import { GodComplex }       from '../gods_complex/index';   
 export class HelperBot {
